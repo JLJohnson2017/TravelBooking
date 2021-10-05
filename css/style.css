@@ -1,0 +1,87 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, "Helvertica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  color: #926239;
+  line-height: 1.6;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1.2; /** Making this a bit smaller so when screen size decreases there isn't so much space between the lines of the header **/
+
+}
+
+.showcase{
+  background-image: url(../images/beach.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /** vh stands for viewport height. your image will take up the full size of the viewport rehardless of the size (desktop vs. mobile) **/
+  display: flex; /** Default is a flex row (your elements aligned in a horizontal row). but we want it to be aligned on top of another (column) **/
+  flex-direction: column;
+
+/** Now we want to center align out showcase text an align it in the center of the image (left right top and bottom) **/
+  justify-content: center; /** This pushed the content down to the center of the image **/
+  align-items: center; /** This aligns the text in the center of the screen (or its container) **/
+  text-align: center; /** Also need to add a text align center so when the screen size decreases and words move to the next line, they stay centered **/
+
+  /** Now add padding to the sides beause whn the window gets really small the text is right up against it **/
+
+  padding: 0 20px;
+}
+
+.showcase p{
+  font-size: 20px;
+}
+
+.showcase .button{
+  font-size: 18px;
+  text-decoration: none;
+  color: #926239;
+  border: #926239 1px solid;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.showcase .button:hover{
+  background: #926239;
+  color:white;
+
+}
+
+.section-a{
+  padding: 20px;
+  background: #926239;
+  color: white;
+  text-align:center;
+}
+
+.section-b{
+  padding: 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.section-c{
+  display: flex;
+}
+
+.section-c div{
+  padding: 20px;
+  text-align: center;
+}
+
+.section-c .box1, .section-c .box3{
+  background: #926239;
+  color: white;
+}
+
+.section-c .box2{
+  background: #f9f9f9;
+}
